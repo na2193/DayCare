@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>DaycareApp</title>
+</head>
+<body background="{{backgroundImage}}">
+    <div id="header">
+        <div id="logoBackground">
+            <!--<img id="logoPic" src="/Users/NasimAhmed/Desktop/DayCareApp/logo.png">-->
+            <h1 id="logo">DayCareFun</h1>
+            <h3 id="logoAddress">Centreville, Va 123-456-7890</h3>
+        </div>
+        <div id="navBar">
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="#contact">Contact</a></li>
+            <li><a href="#about">About</a></li>
+            <li ><a href="#login">Login</a></li>
+            <li ><a href="#register">Register</a></li>
+        </ul>
+        </div>
+    </div>
+    <div class="body_slideshow" style="max-width:400px">
+        <img class="mySlides" src="{{body_image1}}" style="width:88.25%">
+        <img class="mySlides" src="{{body_image2}}" style="width:100%">
+    </div>
+
+    <div class="flex-container">
+        <div class="about">
+            <h2>About</h2>
+            <p>We are a family owned daycare. Our mission is to provide quality
+            childcare service that will benefit children, parents, and the community.
+            We are located in Centreville, VA off of route 28.
+            We strive to encourage creativity, individuality and independence 
+            in an environment filled with love, patience and kindness.
+            </p>
+        </div>
+        <div class="about">
+            <h2>Services</h2>
+            <p>We offer full time day care services for children range in age from infant to 4 years old.
+            <br> some more stuff here
+            <br><br> CPR & First Aid Certified <br> State Licensed <br> USDA Food Program
+               
+            </p>
+        </div>
+    </div>
+    
+    <div class="footer">
+        <h2>Contact Us Today! 123-456-7890</h2>
+        <h4>Copyright 2018. DayCareFun Home Daycare - Serving Centreville, Clifton, and Fairfax, VA. All rights reserved.</h4>
+    </div>
+
+<script>
+    var myIndex = 0;
+    carousel();
+    
+    function carousel() {
+        var i;
+        var x = document.getElementsByClassName("mySlides");
+        for (i = 0; i < x.length; i++) {
+           x[i].style.display = "none";  
+        }
+        myIndex++;
+        if (myIndex > x.length) {myIndex = 1}    
+        x[myIndex-1].style.display = "block";  
+        setTimeout(carousel, 4000); // Change image every 4 seconds
+    }
+    </script>
+</body>
+</html>
+
